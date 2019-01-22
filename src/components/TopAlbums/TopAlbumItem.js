@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 class TopAlbumItem extends Component {
+   
     render() {
+        var {album} = this.props;
         return (
             <div className="col-md-4 col-sm-6">
-                <a href="ChiTietAlbum.html" className="gla_news_block">
+             <Link to={album.slug} id={album.id}></Link>
+                <a href={album.id} className="gla_news_block">
                     <span className="gla_news_img">
-                        <span className="gla_over" data-image="http://www.aocuoithanhtam.com/upload/tinnho/bia2-15040052631_330x217.14.jpg" />
+                        <span className="gla_over" data-image={album.image} />
                     </span>
-                    <span className="gla_news_title">Chụp hìn cưới tại Biên Hòa Đồng Nai </span>
-                    <p>Biên Hòa , <strong>Đồng Nai</strong></p>
+                    <span className="gla_news_title">{album.name}</span>
+                    <p>{album.location} <strong>{album.city}</strong></p>
                 </a>
             </div>
         );

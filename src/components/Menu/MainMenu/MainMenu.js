@@ -1,9 +1,12 @@
 
 import React, { Component } from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import MenuItem from './MenuItem';
+import { Route, Link } from 'react-router-dom';
+import { renderLink } from '../../../methods/create_menu_link';
+
 class MainMenu extends Component {
+
     render() {
+        var { menus } = this.props;
         return (
             <div>
                 <div className="gla_main_menu gla_main_menu_mobile">
@@ -19,9 +22,9 @@ class MainMenu extends Component {
                 </div>
                 <div className="gla_main_menu_content_menu gla_wht_txt text-right">
                     <div className="container">
-                       
-                            <MenuItem />
-                       
+                        <ul>
+                            {renderLink(menus)}
+                        </ul>
                     </div>
 
                 </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import TopAlbumItem from './TopAlbumItem';
+import TopAlbumsContainer from './../../containers/TopAlbumsContainer';
 class TopAlbums extends Component {
     render() {
         return (
@@ -13,11 +14,8 @@ class TopAlbums extends Component {
             has a beautiful, unobstructed view of the World Trade One building and a convenient ferry that
             runs between it and Manhattan.</p>
           {/* boxes */}
-          <div className="gla_icon_boxes row text-left">
-            <TopAlbumItem/>
-            <TopAlbumItem/>
-            <TopAlbumItem/>
-          </div>
+          
+            <TopAlbumsContainer/>
           <div className="gla_post_more clearfix">
             <div>
               <a href="Album.html" className="btn">Xem thêm</a>

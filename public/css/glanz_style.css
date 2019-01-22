@@ -136,7 +136,7 @@ body {
 	font-size: 1.2em;
 }
 .top-video{
-	    padding: 120px 10px 120px 30px!important;
+	    padding:120px 10px 120px 30px!important;
 }
 .gla_noheader {
 	height: 5px;
@@ -280,6 +280,8 @@ h2 {
 .gla_middle_titles h2 {
 	font:430 100px/110px BickhamScriptPro;
 	margin-bottom: 60px;
+	text-align: center;
+	margin-left: -70px;
 }
 
 .text-center .gla_middle_titles h2:after  {
@@ -4529,6 +4531,7 @@ video#video_background  {
 		display: block;
 		margin-bottom: 22px;
 		padding: 0 30px;
+		height: 75px;
 	}
 	.gla_news_author {
 		display: block;

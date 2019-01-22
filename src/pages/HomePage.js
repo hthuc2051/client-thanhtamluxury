@@ -3,10 +3,11 @@ import Header from '../components/Header/Header';
 import Slider from '../components/Slider/Slider';
 import Footer from '../components/Footer/Footer';
 import TopAlbums from '../components/TopAlbums/TopAlbums';
-import TopVideos from '../components/TopVideos/TopVideos';
+import TopVideosContainer from '../containers/TopVideosContainer';
 import TopDresses from '../components/TopDresses/TopDresses';
 import Quote from '../components/Quote/Quote';
 import Appointment from '../components/Appointment/Appointment';
+import TopVideos from '../components/TopVideos/TopVideos';
 class HomePage extends Component {
     render() {
         return (

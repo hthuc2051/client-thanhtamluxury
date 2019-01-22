@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Menu from '../Menu/Menu';
+import DefaultMenuContainer from '../../containers/DefaultMenuContainer';
 class Header extends Component {
     render() {
         return (
@@ -13,7 +14,7 @@ class Header extends Component {
                                 <a href="TrangChu.html" className="gla_logo">Thanh tâm luxury</a>
                             </div>
                         </div>
-                        <Menu/>
+                        <DefaultMenuContainer/>
                     </div>
                 </nav>
             </header>
