@@ -1,34 +1,37 @@
 import React, { Component } from 'react';
-import Header from '../components/Header/Header';
-import Slider from '../components/Slider/Slider';
-import Footer from '../components/Footer/Footer';
-import TopAlbums from '../components/TopAlbums/TopAlbums';
-import TopVideosContainer from '../containers/TopVideosContainer';
-import TopDresses from '../components/TopDresses/TopDresses';
-import Quote from '../components/Quote/Quote';
-import Appointment from '../components/Appointment/Appointment';
-import TopVideos from '../components/TopVideos/TopVideos';
+import {
+    DefaultSliderContainer,
+    TopAlbumsContainer,
+    TopDressesContainer,
+    TopVideosContainer,
+    QuoteContainer
+} from './../containers/index';
+
+import { Header, Appointment } from './../components/index';
+
+
 class HomePage extends Component {
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     render() {
         return (
-            <div className="gla_page" id="gla_page">
-                <a href="#gla_page" className="gla_top ti ti-angle-up " />
-                <div className="gla_music_icon">
-                    <i className="ti ti-music" />
-                </div>
-                <div className="gla_music_icon_cont">
-                    <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/108238095&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&visual=true" />
-                </div>
+            <div>
                 <Header />
-                <Slider />
-                <section id="gla_content" className="gla_content">
-                    <TopAlbums />
-                    <TopVideos />
-                    <TopDresses />
-                    <Quote />
-                    <Appointment />
-                </section>
-                <Footer />
+                <div className="gla_page" id="gla_page">
+                    <a href="#" className="gla_top ti ti-angle-up " />
+                    {/* <div className="gla_music_icon">
+                    <i className="ti ti-music" />
+                </div> */}
+                    <DefaultSliderContainer />
+                    <section id="gla_content" className="gla_content">
+                        <TopAlbumsContainer />
+                        <TopVideosContainer />
+                        <TopDressesContainer />
+                        <QuoteContainer />
+                        <Appointment />
+                    </section>
+                </div>
             </div>
         );
     }

@@ -124,7 +124,7 @@
 				paginationSpeed : 200, 
 				rewindSpeed : 200,
 				items:1,
-				autoPlay : false, 
+				autoPlay : true, 
 				touchDrag:true,
 				singleItem:true,
 				navigationText:['<i class="ti ti-angle-left"></i>','<i class="ti ti-angle-right"></i>'],
@@ -556,6 +556,7 @@
 			$(this).find('ul').removeClass('active');
 		}
 	});
+	
 	$('.gla_search_parent').on({
 		mouseenter:function(){
 			$(this).find('ul').addClass('active');
@@ -600,16 +601,17 @@
 
 	 	/*Masonry*/
 		var $grid = $('.grid').isotope({
-		  itemSelector: '.grid-item',
+		   itemSelector: '.grid-item',
 		  percentPosition: true,
 		  stagger: 0,
 		  transitionDuration: '0',
-		  isAnimated: true,
+		  //isAnimated: true,
 		  masonry: {
 		    columnWidth: '.grid-item',
 		    
 		  }	  
 		});
+
 		$grid.imagesLoaded().progress( function() {
 		  $grid.isotope('layout');
 		});
@@ -620,9 +622,9 @@
 
 
 
-		$('.masonry').masonry({
-			itemSelector: '.masonry-item',
-		});
+		// $('.masonry').masonry({
+		// 	itemSelector: '.masonry-item',
+		// });
 
 		$('.filter-button-group').on( 'click', 'a', function() {
 		  var filterValue = $(this).attr('data-filter');

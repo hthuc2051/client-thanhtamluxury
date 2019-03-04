@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import { fetch_home_data } from '../../../methods/fetch_home_data'
-import { renderLink } from '../../../methods/create_menu_link';
+import { renderMenuLink } from '../../../methods/create_menu_link';
 
 class DefaultMenu extends Component {
 
@@ -12,7 +10,7 @@ class DefaultMenu extends Component {
             <div>
                 <div className="gla_default_menu">
                     <ul>
-                        {renderLink(menus)}
+                        {renderMenuLink(menus)}
                     </ul>
                 </div>
             </div>
