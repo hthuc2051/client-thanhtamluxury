@@ -16,6 +16,7 @@ import DressDetailsPageContainer from './DressDetailsPage/DressDetailsPageContai
 import AlbumsPricePageContainer from './AlbumsPricePage/AlbumsPricePageContainer';
 import InclusivePricePageContainer from './InclusivePricePage/InclusivePricePageContainer';
 import VideosPricePageContainer from './VideosPricePage/VideosPricePageContainer';
+import AdminPageContainer from './AdminPage/AdminPageContainer';
 export {
     //Home Page
     DefaultSliderContainer,
@@ -44,5 +45,8 @@ export {
     // Price pages
     AlbumsPricePageContainer,
     InclusivePricePageContainer,
-    VideosPricePageContainer
+    VideosPricePageContainer,
+
+    //Admin page
+    AdminPageContainer,
 };

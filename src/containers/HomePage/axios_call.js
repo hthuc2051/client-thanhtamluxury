@@ -2,6 +2,9 @@
 import * as Actions from './actions';
 import callApi from '../../utils/apiCaller';
 
+
+// TOTO : CHANGE TO CALL API WITH SERVICESTYPE
+
 // Fetch
 export const axios_fetch_MenusItems = () => {
     return dispatch => {
@@ -28,6 +31,8 @@ export const axios_fetch_TopAlbums = () => {
 
 export const axios_fetch_TopVideos = () => {
     return dispatch => {
+
+        
         return callApi('top_videos_json', 'GET', null).then(res => {
             dispatch(Actions.actFetchTopVideosJson(res.data));
         });
